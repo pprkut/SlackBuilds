@@ -4,7 +4,7 @@
 
 # Copyright 2008 Heinz Wiesinger <pprkut@liwjatan.at>
 # All rights reserved.
-# 
+#
 # Redistribution and use of this script, with or without modification, is
 # permitted provided that the following conditions are met:
 #
@@ -66,6 +66,9 @@ tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
 cd $PRGNAM-$VERSION
 chown -R root:root .
 chmod -R u+w,go+r-w,a-s .
+
+# Fix x86_64 multilib issue
+sed -i "s|-L\${spfx}/lib|-L\${spfx}/lib$LIBDIRSUFFIX|" configure
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \

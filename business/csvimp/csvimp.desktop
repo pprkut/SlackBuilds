@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CSVImp
+GenericName=CSV Importer for xTuple
+Comment=CSV Importer for xTuple
+Exec=csvimp
+Icon=csvimp.xpm
+Terminal=false
+Type=Application
+Categories=Application;Office
+StartupNotify=true

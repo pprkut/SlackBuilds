@@ -1,0 +1,5 @@
+CSVimp is a tool designed to import Comma Separated Value (CSV)
+files into the database for the xTuple Applications (PostBooks
+and OpenMFG)
+
+This requires openrpt.

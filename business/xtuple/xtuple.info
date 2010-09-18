@@ -1,0 +1,18 @@
+PRGNAM="xtuple"
+VERSION="3.5.4"
+HOMEPAGE="http://www.postbooks.org/"
+DOWNLOAD="http://downloads.sourceforge.net/postbooks/xtuple-client-3.5.4-source.tar.bz2 \
+    http://downloads.sourceforge.net/project/postbooks/03%20PostBooks-databases/3.5.4/init.sql \
+    http://downloads.sourceforge.net/postbooks/postbooks_demo-3.5.4.backup \
+    http://downloads.sourceforge.net/postbooks/postbooks_empty-3.5.4.backup \
+    http://downloads.sourceforge.net/postbooks/postbooks_quickstart-3.5.4.backup"
+MD5SUM="3969eeb4477fc60bb7995ad9ba38c1ce \
+    9aa257df26fc0495a65bacb7fbf1f251 \
+    88ef1930cc764f27584c4dfa3e431b54 \
+    2f8da74f66a14371850ad05e1edcaf7d \
+    bb7d5726e08af69e51a06b559856e167"
+DOWNLOAD_x86_64=""
+MD5SUM_x86_64=""
+MAINTAINER="Heinzi Wiesinger"
+EMAIL="pprkut@liwjatan.at"
+APPROVED=""

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+CWD=$(pwd)
+
+cd /usr/share/games/7kaa
+  ./7kaa "$@"
+cd "$CWD"

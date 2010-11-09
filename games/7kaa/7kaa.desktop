@@ -1,0 +1,10 @@
+[Desktop Entry]
+X-MultipleArgs=false
+Terminal=false
+Exec=7kaa
+Icon=/usr/share/pixmaps/7k.ico
+Type=Application
+Categories=Game;
+StartupNotify=false
+Name=Seven Kingdoms: Ancient Adversaries
+GenericName=Strategy Game

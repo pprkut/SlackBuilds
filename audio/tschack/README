@@ -1,0 +1,18 @@
+tschack is a fork of jack-audio-connection-kit, implementing
+SMP support and clickless connection changes.
+
+jackd has to run with realtime privileges.  One way to do this on Slackware
+would be to use set_rlimits.  Since 12.2 there's another way - if you have
+a filesystem that supports posix capabilities (reiserfs does not), you can
+grant jackd the rights to run in realtime mode, even when started as a normal 
+user, with the following command:
+
+  setcap cap_ipc_lock,cap_sys_nice=ep /usr/bin/jackd
+
+If you use qjackctl to start jack, it will need the same capabilities set
+to be able to start jack as non-root user.  You can use the same command
+with 'qjackctl' instead of 'jackd'
+
+Optional dependencies are libffado, and celt.
+
+This conflicts with jack-audio-connection-kit.

@@ -1,0 +1,3 @@
+libjreen is a Jabber and XMPP library for Qt.
+
+This optionally depends on speex.

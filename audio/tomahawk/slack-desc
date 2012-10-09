@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------|
+tomahawk: tomahawk (Social Music Player)
+tomahawk:
+tomahawk: Tomahawk is a music player that fundamentally changes the way
+tomahawk: music is consumed and shared. It decouples the name of the song
+tomahawk: from the source it was shared from - and fulfills the request
+tomahawk: using all of your available sources. This creates a universal
+tomahawk: translation layer across music repositories, streaming services
+tomahawk: and geographic territories.
+tomahawk:
+tomahawk: Homepage: http://www.tomahawk-player.org/
+tomahawk:

@@ -1,0 +1,10 @@
+For all those things you.... probably shouldn't have been doing
+anyway....
+
+ - custom superglobals
+ - user-defined function and class manipulation
+ - sandboxing
+
+To enable the runkit extension for php, go to /etc/php/runkit.ini
+and uncomment the line:
+  ; extension=runkit.so

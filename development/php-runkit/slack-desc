@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+          |-----handy-ruler------------------------------------------------------|
+php-runkit: php-runkit (runtime modification of php)
+php-runkit:
+php-runkit: For all those things you.... probably shouldn't have been doing
+php-runkit: anyway....
+php-runkit:
+php-runkit: - custom superglobals
+php-runkit: - user-defined function and class manipulation
+php-runkit: - sandboxing
+php-runkit:
+php-runkit: Homepage: https://github.com/zenovich/runkit
+php-runkit:

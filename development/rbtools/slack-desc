@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+       |-----handy-ruler----------------------------------------------------|
+rbtools: rbtools (Review Board console utility scripts)
+rbtools:
+rbtools: rbtools is a collection of console utility scripts for use with
+rbtools: Review Board. This consists of the following officially supported
+rbtools: tools:
+rbtools:
+rbtools: * post-review - Create and update review requests based on changes
+rbtools:                  in a local tree.
+rbtools:
+rbtools: Homepage: http://www.reviewboard.org/
+rbtools:

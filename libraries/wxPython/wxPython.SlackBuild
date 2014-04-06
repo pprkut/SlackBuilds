@@ -2,7 +2,7 @@
 
 # Slackware build script for wxPython
 
-# Copyright 2007-2011 Heinz Wiesinger, Amsterdam, The Netherlands
+# Copyright 2007-2014 Heinz Wiesinger, Amsterdam, The Netherlands
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +23,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=wxPython
-VERSION=2.8.12.1
+VERSION=3.0.0.0
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -39,13 +39,6 @@ CWD=$(pwd)
 TMP=${TMP:-/tmp/SBo}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
-
-# Gnomeprint support
-if [ "${GNOMEPRINT:-no}" = "no" ]; then
-    do_gp="without"
-else
-    do_gp="with"
-fi
 
 if [ "$ARCH" = "i486" ]; then
   SLKCFLAGS="-O2 -march=i486 -mtune=i686"
@@ -85,26 +78,18 @@ CXXFLAGS="$SLKCFLAGS" \
   --disable-static \
   --with-sdl \
   --with-opengl \
-  --$do_gp-gnomeprint \
   --enable-unicode \
   --enable-graphics_ctx \
   --enable-display \
   --enable-mediactrl \
   --enable-sound \
+  --with-gtk=2 \
   --libdir=/usr/lib$LIBDIRSUFFIX \
   --build=$ARCH-slackware-linux
 
 make
 
-#Additional stuff from contrib
-make -C contrib/src/gizmos
-make -C contrib/src/ogl
-make -C contrib/src/stc
-
 make install DESTDIR=$PKG
-make -C contrib/src/gizmos install DESTDIR=$PKG
-make -C contrib/src/ogl install DESTDIR=$PKG
-make -C contrib/src/stc install DESTDIR=$PKG
 
 cd wxPython
   python setup.py \
@@ -114,7 +99,7 @@ cd wxPython
     EP_FULL_VER=0 \
     NO_SCRIPTS=1 \
     WX_CONFIG="$TMP/$PRGNAM-src-$VERSION/wx-config --no_rpath" \
-    build_ext --include-dirs=$TMP/$PRGNAM-src-$VERSION/lib/wx/include/gtk2-unicode-release-2.8 \
+    build_ext --include-dirs=$TMP/$PRGNAM-src-$VERSION/lib/wx/include/gtk2-unicode-3.0 \
               --library-dirs=$TMP/$PRGNAM-src-$VERSION/lib \
               --rpath=/usr/lib$LIBDIRSUFFIX \
     build
@@ -127,14 +112,14 @@ cd wxPython
     NO_SCRIPTS=1 \
     WX_CONFIG="$TMP/$PRGNAM-src-$VERSION/wx-config --prefix=$PKG/usr/bin/ --no_rpath" \
     SYS_WX_CONFIG="wx-config --enable-unicode" \
-    build_ext --include-dirs=$TMP/$PRGNAM-src-$VERSION/lib/wx/include/gtk2-unicode-release-2.8 \
+    build_ext --include-dirs=$TMP/$PRGNAM-src-$VERSION/lib/wx/include/gtk2-unicode-3.0 \
               --library-dirs=$TMP/$PRGNAM-src-$VERSION/lib \
               --rpath=/usr/lib$LIBDIRSUFFIX \
     install --root=$PKG
-cd -
 
-# install wxPython includes
-cp -rf include/wx-2.8/wx/wxPython $PKG/usr/include/wx-2.8/wx/
+    # install wxPython includes
+    cp -rf include/wx/wxPython $PKG/usr/include/wx-3.0/wx/
+cd -
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
